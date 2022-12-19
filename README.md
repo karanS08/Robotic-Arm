@@ -11,3 +11,12 @@ The arduino code is just hard coded to pick object from a specific point and dro
 ## ToDo:
 
 Add revese kinematics to move to any position and detect the object from anywhere on the frame .
+
+
+## Images : 
+
+<img src = "https://github.com/karanS08/Robotic-Arm/blob/main/assets/Screenshot%20from%202022-10-16%2013-05-28.png" width="300px">
+<img src = "https://github.com/karanS08/Robotic-Arm/blob/main/assets/Screenshot%20from%202022-10-16%2013-31-06.png" width="300px">
+<img src="https://github.com/karanS08/Robotic-Arm/blob/main/assets/Screenshot%20from%202022-10-16%2013-31-23.png" width="300px">
+<img src="https://github.com/karanS08/Robotic-Arm/blob/main/assets/Screenshot%20from%202022-10-16%2013-31-43.png"width="300px">
+<img src="https://github.com/karanS08/Robotic-Arm/blob/main/assets/Screenshot%20from%202022-10-16%2013-32-50.png"width="300px">
