@@ -1,23 +1,10 @@
 import time
-# from cgi import print_form
-# import datetime
-# from lib2to3.pgen2 import driver
-# import re
-# import time
-# from turtle import color
-# import serial
 import cv2
 import numpy as np
 import threading
-# from driver import *
-
 time_to_record_data = 10
 cam_port = 0
-
-
 cap = cv2.VideoCapture(cam_port)  # capture video from camera
-
-
 
 def mask(framee):
     light_blue = np.array([110, 50, 50])
@@ -44,7 +31,6 @@ def mask(framee):
     except Exception as e:
         print(e)
 
-
 def mean(red_mask, blue_mask, green_mask):
     b = blue_mask[:, :, :1]
     g = green_mask[:, :, 1:2]
@@ -66,8 +52,6 @@ def mean(red_mask, blue_mask, green_mask):
     else:
 
         return "None"
-
-
 
 def find_color():
     endTime = datetime.datetime.now() + datetime.timedelta(seconds=time_to_record_data)
@@ -101,35 +85,10 @@ def read_raw_data():
     f.close()
 
 
-# def send_data(data):
-
-
-#     switcher = {
-#         "1": red,
-#         "2": green,
-#         "3": blue
-#     }
-
-#     func = switcher.get(data, lambda: "Invalid color")
-#     func()
-
-
-
-
-
-
 
 def main():
     return 0
-    
-    # find_color()
-
-    
-
-    
-# identify cube in the frame
-
-# create a function to look for color only in the box
+    find_color()
 
 def box_color(frame):
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
@@ -154,16 +113,7 @@ def box_color(frame):
                 crop = frame[y:y + h, x:x + w]
                 return crop
 
-
-
-            
-
     return frame 
-
-
-
-
-
 
 def cam_display():
     
@@ -189,14 +139,9 @@ def cam_display():
 
 if __name__ == "__main__":
     t1 = threading.Thread(target=cam_display)       # Multithreading
-    # t2 = threading.Thread(target=main)
- 
-
-
+    t2 = threading.Thread(target=main)
     t1.start()
-    # t2.start()
-
-
+    t2.start()
     t1.join()
-    # t2.join()
+    t2.join()
    
